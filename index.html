@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শুভ সরস্বতী পূজা ২০২৬ | Sourav Ghosh</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="canvas"></canvas>
+
+    <header>
+        <div class="garland"></div> 
+        <div class="banner">
+            <h1>শুভ সরস্বতী পূজা</h1>
+            <p>বিদ্যার দেবীকে জানাই সহস্র প্রণাম</p>
+        </div>
+    </header>
+
+    <section class="timer-section">
+        <h3>পূজার আর মাত্র বাকি</h3>
+        <div id="countdown">
+            <div class="t-box"><span id="days">00</span><p>দিন</p></div>
+            <div class="t-box"><span id="hours">00</span><p>ঘণ্টা</p></div>
+            <div class="t-box"><span id="mins">00</span><p>মিনিট</p></div>
+            <div class="t-box"><span id="secs">00</span><p>সেকেন্ড</p></div>
+        </div>
+    </section>
+
+    <main>
+        <div class="main-card">
+            <div class="image-circle">
+                <img src="maaa.png" alt="Saraswati Maa">
+            </div>
+            <h2>জয় মা সরস্বতী</h2>
+            <div class="mantra">
+                <p>'ওঁ' সরস্বতী মহাভাগে বিদ্যে কমললোচনে।<br>বিশ্বরূপে বিশালাক্ষি বিদ্যাং দেহি নমোঽস্তুতে।।</p>
+            </div>
+        </div>
+
+      
+
+        
+        
+        <section class="info-section">
+            <div class="info-card">
+                <div class="info-item">
+                    <span class="icon">📍</span>
+                    <h4>পূজার স্থান</h4>
+                    <p>ড্যাফোডিল ইন্টারন্যাশনাল ইউনিভার্সিটি ক্যাম্পাস,<br>ঢাকা, বাংলাদেশ</p>
+                </div>
+                <div class="info-item">
+                    <span class="icon">⏰</span>
+                    <h4>পূজার সময়</h4>
+                    <p>সকাল ৮:৩০ ঘটিকা (অঞ্জলি শুরু)</p>
+                </div>
+                <div class="info-item">
+                    <span class="icon">📅</span>
+                    <h4>তারিখ</h4>
+                    <p>২৩ জানুয়ারি, ২০২৬ (শুক্রবার)</p>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="gallery-head">উৎসবের গ্যালারি</h2>
+        <div class="gallery">
+            <img src="festival.jpg" alt="Alpona">
+            <img src="festival1.jpg" alt="Puja">
+            <img src="festival2.jpg" alt="Festival">
+            <img src="FESTIVALL.png" alt="Festival">
+        </div>
+
+          <section class="user-section">
+    <h2 class="gallery-head">ইউজার রেজিস্ট্রেশন (পূজারী)</h2>
+    
+    <div id="userAuthBox" class="auth-box">
+        <p id="authMsg">অ্যাকাউন্ট নেই? সাইন-আপ করুন</p>
+        <input type="text" id="userName" placeholder="আপনার নাম">
+        <input type="password" id="userPass" placeholder="পাসওয়ার্ড">
+        <div style="margin-top: 10px;">
+            <button onclick="userSignup()">Sign Up</button>
+            <button onclick="userLogin()" style="background: #5d4037;">Login</button>
+        </div>
+    </div>
+
+
+    <div id="userEventForm" style="display: none;" class="reg-form-card">
+        <h3>স্বাগতম, <span id="loggedInUser"></span>!</h3>
+        <p>পূজার জন্য আপনার তথ্য নিশ্চিত করুন:</p>
+        <div class="user-inputs">
+            <input type="text" id="studentID" placeholder="DIU Student ID">
+            <select id="userFeeStatus">
+                <option value="Unpaid">Fee: Unpaid (বাকি)</option>
+                <option value="Paid">Fee: Paid (পরিশোধিত)</option>
+            </select>
+            <button onclick="submitPujaReg()">রেজিস্ট্রেশন কনফার্ম করুন</button>
+        </div>
+        <button class="logout-btn" onclick="userLogout()" style="margin-top: 15px;">Logout</button>
+    </div>
+</section>
+
+        <section class="admin-dashboard">
+            <h2 class="gallery-head" style="margin-top: 0;">অ্যাডমিন ড্যাশবোর্ড</h2>
+            
+            <div id="loginBox" class="auth-box">
+                <p>পাসওয়ার্ড দিয়ে ড্যাশবোর্ড খুলুন</p>
+                <input type="password" id="adminPass" placeholder="Password">
+                <button onclick="checkLogin()">লগইন</button>
+            </div>
+
+    
+
+            <div id="dashboard" style="display: none;">
+                <div class="dash-controls">
+                    <button onclick="logout()" class="logout-btn">লগআউট</button>
+                </div>
+                
+                <div class="reg-form">
+                    <input type="text" id="regName" placeholder="নাম">
+                    <input type="text" id="regID" placeholder="আইডি">
+                    <select id="regFee">
+                        <option value="Paid">Paid</option>
+                        <option value="Unpaid">Unpaid</option>
+                    </select>
+                    <button onclick="addParticipant()">মেম্বার যোগ করুন</button>
+                </div>
+
+                <div class="stats">মোট মেম্বার: <span id="totalCount">0</span></div>
+
+                <div style="overflow-x: auto;">
+                    <table class="member-table">
+                        <thead>
+                            <tr>
+                                <th>নাম</th>
+                                <th>আইডি</th>
+                                <th>পেমেন্ট</th>
+                                <th>অ্যাকশন</th>
+                            </tr>
+                        </thead>
+                        <tbody id="memberList"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created with 💛 by <b>Sourav Ghosh</b> | Daffodil International University</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

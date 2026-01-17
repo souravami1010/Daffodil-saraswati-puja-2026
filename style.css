@@ -1,0 +1,106 @@
+/* =========================================
+   SECTION 1: GENERAL & RESET
+   ========================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Hind Siliguri', sans-serif; }
+body { background-color: #fff9e6; overflow-x: hidden; color: #444; }
+
+#canvas {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 1000;
+}
+
+/* =========================================
+   SECTION 2: HEADER & BANNER
+   ========================================= */
+header {
+    background: linear-gradient(to bottom, #ff9933, #ffcc00);
+    height: 300px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    border-bottom: 8px solid #d35400; position: relative; text-align: center;
+}
+
+header::before {
+    content: "🌸🌼🌸🌼🌸🌼🌸🌼🌸🌼🌸🌼🌸🌼";
+    position: absolute; top: 10px; font-size: 1.5rem; letter-spacing: 5px; opacity: 0.8;
+}
+
+.banner h1 { color: #fff; font-size: 4rem; text-shadow: 3px 3px 10px rgba(0,0,0,0.3); margin-bottom: 10px; }
+.banner p { color: #fff; font-size: 1.5rem; text-shadow: 1px 1px 5px rgba(0,0,0,0.2); }
+
+/* =========================================
+   SECTION 3: TIMER & INFO
+   ========================================= */
+.timer-section { background: #d35400; padding: 25px; text-align: center; color: white; }
+#countdown { display: flex; justify-content: center; gap: 15px; }
+.t-box { background: #fff; color: #d35400; padding: 12px; border-radius: 12px; min-width: 90px; }
+.t-box span { font-size: 2.5rem; font-weight: bold; display: block; }
+
+.info-section { padding: 40px 20px; background: #fff; margin: 30px auto; max-width: 900px; border-radius: 20px; border-left: 10px solid #ff9933; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.info-card { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
+.info-item { text-align: center; }
+.info-item h4 { color: #d35400; margin-bottom: 5px; }
+
+/* =========================================
+   SECTION 4: MAIN CARD & GALLERY
+   ========================================= */
+main { max-width: 900px; margin: 50px auto; padding: 20px; text-align: center; }
+.main-card { background: white; padding: 50px 30px; border-radius: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); }
+.image-circle { width: 260px; height: 260px; margin: 0 auto 25px; border: 8px solid #ffcc00; border-radius: 50%; overflow: hidden; }
+.image-circle img { width: 100%; height: 100%; object-fit: contain; }
+.mantra { font-size: 1.4rem; color: #b35900; font-style: italic; line-height: 2; margin-top: 20px; }
+
+.gallery-head { margin: 50px 0 25px; color: #d35400; font-size: 2.2rem; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.gallery img { width: 100%; height: 260px; object-fit: cover; border-radius: 20px; border: 5px solid #ffcc00; transition: 0.4s; }
+.gallery img:hover { transform: scale(1.05); }
+
+/* =========================================
+   SECTION 5: ADMIN DASHBOARD STYLES
+   ========================================= */
+.admin-dashboard { max-width: 900px; margin: 50px auto; padding: 30px; background: #fff; border-radius: 20px; border: 2px dashed #ffcc00; }
+.auth-box input { padding: 10px; border: 2px solid #ffcc00; border-radius: 5px; }
+.auth-box button { padding: 10px 20px; background: #d35400; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+
+.reg-form { margin: 20px 0; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.reg-form input, .reg-form select { padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+
+.member-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.member-table th, .member-table td { padding: 12px; border-bottom: 1px solid #eee; }
+.status-paid { color: #27ae60; font-weight: bold; }
+.status-unpaid { color: #e67e22; font-weight: bold; }
+.logout-btn { background: #555; color: #fff; border: none; padding: 5px 15px; border-radius: 5px; cursor: pointer; }
+.delete-btn { background: #ff4d4d; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
+.stats { margin-bottom: 15px; font-weight: bold; color: #d35400; }
+
+footer { background: #ffcc00; padding: 40px; margin-top: 60px; text-align: center; }
+
+/* --- USER SECTION STYLES --- */
+.user-section {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 2px solid #ffcc00;
+}
+
+.reg-form-card {
+    padding: 20px;
+    background: #fff9e6;
+    border-radius: 15px;
+}
+
+.user-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.user-inputs input, .user-inputs select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ffcc00;
+}
